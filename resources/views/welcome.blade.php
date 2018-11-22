@@ -91,18 +91,34 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Sint's Verlanglijstje
+                    Laravel JSON API
                 </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
+            <pre id="json">Hier komt de info</pre>
             </div>
         </div>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
+
+        <script>
+            $(document).ready(function(){
+                $.ajaxSetup({
+                    headers: {
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    }
+                });
+                $.ajax({
+                    type: 'GET',
+                    url: '/api/ad',
+                    dataType: "JSON",
+                    success: function (data) {
+                        $('pre#json').text(JSON.stringify(data, null, '\t'));
+                    },
+                    error: function(jhr, msg) {
+                        console.log('Error: ' + msg, jhr);
+                    }
+                })
+            })
+        </script>
     </body>
 </html>
