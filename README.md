@@ -10,7 +10,7 @@ Richt mij eerst op de stappen die Renée in zijn repo heeft doorlopen m.b.t. Aja
 Model Ads en migration tabel aangemaakt
 $ php artisan make:model Ad -m
 
-11:45 uur
+## 11:45 uur
 migration tabel aangepast
 
 11:50 uur
