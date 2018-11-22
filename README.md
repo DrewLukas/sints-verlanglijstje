@@ -38,4 +38,9 @@ public function boot()
     }
 ook gelijk bugfix toegepast voor weergave css in http en https
 
+12:20 uur
+migration opnieuw, nu gelukt
+$ php artisan migrate:fresh
+$ php artisan migrate
+
 
