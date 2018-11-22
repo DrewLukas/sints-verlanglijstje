@@ -22,7 +22,20 @@ $ php artisan migrate
 datase sint aangemaakt in PHPMyAdmin
 
 12:00 uur
+pas .env file aan met gegevens database
 
-
+12:05 uur
+probeerde migration opnieuw uit te voeren. Foutmelding!
+bug fix uitgevoerd
+in AppServiceProvider.php volgende toegevoegd:
+use Illuminate\Support\Facades\Schema;
+public function boot()
+    {
+        Schema::defaultStringLength(191);
+        if(config('app.env') === 'production') {
+            \URL::forceScheme('https');
+        }
+    }
+ook gelijk bugfix toegepast voor weergave css in http en https
 
 
