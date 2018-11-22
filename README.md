@@ -43,4 +43,7 @@ migration opnieuw, nu gelukt
 $ php artisan migrate:fresh
 $ php artisan migrate
 
+12:30 uur--
+Pauze
+
 
