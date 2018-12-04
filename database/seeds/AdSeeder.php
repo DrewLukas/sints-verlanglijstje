@@ -12,8 +12,8 @@ class AdSeeder extends Seeder
     public function run()
     {
         App\Ad::insert([
-            ['cadeau' => 'chocolade geld',
-             'beschrijving' => 'voor het mannetje',
+            ['cadeau' => 'winterpeen',
+             'beschrijving' => 'voor de schimmel',
              'created_at' => now(),
              'updated_at' => now()
             ]
